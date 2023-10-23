@@ -2,7 +2,7 @@ makeCacheMatrix <- function(x = matrix()) {
   e <- NULL
   set <- function(y){
   x <<- y
-  j <<- NULL
+  e <<- NULL
   }
   get <- function()x
   setInverse <- function(inverse) e <<- inverse
