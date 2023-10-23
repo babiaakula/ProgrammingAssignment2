@@ -1,10 +1,10 @@
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(a = matrix()) {
   e <- NULL
   set <- function(y){
-  x <<- y
+  a <<- y
   e <<- NULL
   }
-  get <- function()x
+  get <- function()a
   setInverse <- function(inverse) e <<- inverse
   getInverse <- function() e
   list(set = set, get = get, 
@@ -15,15 +15,15 @@ makeCacheMatrix <- function(x = matrix()) {
 ##Please include your own comment to explain your code (Required in Rubric)
 
 
-cacheSolve <- function(x, ...) {
-## Return a matrix that is the inverse of 'x'
-  e <- x$getInverse()
+cacheSolve <- function(a, ...) {
+## Return a matrix that is the inverse of 'a'
+  e <- a$getInverse()
   if(!is.null(e)){
   message("getting cached data")
   return(e)
   }
-  mat <- x$get()
+  mat <- a$get()
   e <- solve(mat,...)
-  x$setInverse(e)
+  a$setInverse(e)
   e
 }
