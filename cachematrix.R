@@ -12,9 +12,6 @@ makeCacheMatrix <- function(a = matrix()) {
   getInverse = getInverse)
 }
 
-##Please include your own comment to explain your code (Required in Rubric)
-
-
 cacheSolve <- function(a, ...) {
 ## Return a matrix that is the inverse of 'a'
   e <- a$getInverse()
